@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "583870474588",
+    "project_id": "lifetracker-fccc4",
+    "storage_bucket": "lifetracker-fccc4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583870474588:android:7dc0e85f1d5014ca057999",
+        "android_client_info": {
+          "package_name": "com.example.lifetracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583870474588-tdk1t63hr81ro0tn9vbufqa7tabfb8a5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQT_-CGTRS1jUDp_Fw_jDMqn8Md0ZhIak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583870474588-tdk1t63hr81ro0tn9vbufqa7tabfb8a5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
