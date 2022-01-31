@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeTracker">
         <activity
+            android:name=".CaloriesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MoodActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FitnessActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SleepActivity"
+            android:exported="true" />
+        <activity
             android:name=".ModulesActivity"
             android:exported="true" />
         <activity
