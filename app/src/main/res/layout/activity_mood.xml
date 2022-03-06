@@ -6,4 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".MoodActivity">
 
+    <TextView
+        android:id="@+id/moodHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Mood Tracker"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/selectMoodText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Select Current Mood"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodHeading" />
+
+    <RadioGroup
+        android:layout_width="229dp"
+        android:layout_height="207dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectMoodText">
+
+        <RadioButton
+            android:id="@+id/neutralButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Neutral Mood" />
+
+        <RadioButton
+            android:id="@+id/happyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Happy Mood" />
+
+        <RadioButton
+            android:id="@+id/sadButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sad Mood" />
+
+        <RadioButton
+            android:id="@+id/angryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Angry Mood" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/addMoodButton"
+        android:layout_width="370dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="144dp"
+        android:text="Add Mood for Today"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/viewMoodsButton"
+        android:layout_width="370dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="44dp"
+        android:text="View Previous Mood Entries"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addMoodButton" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
