@@ -30,6 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/moodHeading" />
 
     <RadioGroup
+        android:id="@+id/moodGroup"
         android:layout_width="229dp"
         android:layout_height="207dp"
         android:layout_marginTop="40dp"
