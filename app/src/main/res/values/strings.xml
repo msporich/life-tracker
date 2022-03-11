@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">LifeTracker</string>
+    <string name="sleep_tracker">Sleep Tracker</string>
+    <string name="enter_date_mm_dd_yyyy">Enter Date: mm.dd.yyyy</string>
+    <string name="enter_sleep_start_time">Enter Sleep Start Time:</string>
+    <string name="enter_sleep_end_time">Enter Sleep End Time:</string>
+    <string name="add">Add</string>
+
 </resources>
