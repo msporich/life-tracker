@@ -1,5 +1,6 @@
 package com.example.lifetracker
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -90,6 +91,13 @@ class MoodActivity : AppCompatActivity() {
                     }
 
             }
+
+        }
+
+        binding.viewMoodsButton.setOnClickListener {
+
+            var intent = Intent(this, MoodsListActivity::class.java)
+            startActivity(intent)
 
         }
 
