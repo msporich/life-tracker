@@ -20,7 +20,8 @@
         <activity
             android:name=".FitnessActivity"
             android:exported="true"
-            android:parentActivityName=".ModulesActivity"/>
+            android:parentActivityName=".ModulesActivity">
+        </activity>
         <activity
             android:name=".SleepActivity"
             android:exported="true"

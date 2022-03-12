@@ -6,4 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".FitnessActivity">
 
+    <Spinner
+        android:id="@+id/spinnerReps"
+        android:layout_width="212dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="99dp"
+        android:entries="@array/reps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerWeight" />
+
+    <Spinner
+        android:id="@+id/spinnerSets"
+        android:layout_width="212dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="99dp"
+        android:entries="@array/sets"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerReps" />
+
+    <EditText
+        android:id="@+id/txtEquipment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="@string/equipment"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtExerciseName" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="261dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fui_idp_button_background_anonymous" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fitness_tracker"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:id="@+id/txtExerciseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/exercise_name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#eb9b34"
+        android:text="@string/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSets" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#eb9b34"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961"
+        app:srcCompat="@drawable/ic_baseline_keyboard_backspace_24" />
+
+    <Spinner
+        android:id="@+id/spinnerWeight"
+        android:layout_width="212dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="99dp"
+        android:entries="@array/weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEquipment" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

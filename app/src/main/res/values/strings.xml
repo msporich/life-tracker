@@ -1,3 +1,109 @@
 <resources>
     <string name="app_name">LifeTracker</string>
+    <string name="fitness_tracker">Fitness Tracker</string>
+    <string name="weight_lbs">Weight (lbs)</string>
+    <string name="exercise_name">Exercise Name</string>
+    <string name="reps">Reps</string>
+    <string name="calories_burned">Calories Burned</string>
+    <string name="submit">Submit</string>
+    <string name="equipment">Equipment</string>
+    <string-array name="weight">
+        <item>Weight</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+        <item>65</item>
+        <item>70</item>
+        <item>75</item>
+        <item>80</item>
+        <item>85</item>
+        <item>90</item>
+        <item>95</item>
+        <item>100</item>
+        <item>105</item>
+        <item>110</item>
+        <item>115</item>
+        <item>120</item>
+        <item>125</item>
+        <item>130</item>
+        <item>135</item>
+        <item>140</item>
+        <item>145</item>
+        <item>150</item>
+        <item>155</item>
+        <item>160</item>
+        <item>165</item>
+        <item>170</item>
+        <item>175</item>
+        <item>180</item>
+        <item>185</item>
+        <item>190</item>
+        <item>195</item>
+        <item>200</item>
+        <item>205</item>
+        <item>210</item>
+        <item>215</item>
+        <item>220</item>
+        <item>225</item>
+        <item>230</item>
+        <item>235</item>
+        <item>240</item>
+        <item>245</item>
+        <item>250</item>
+        <item>255</item>
+        <item>260</item>
+        <item>265</item>
+        <item>270</item>
+        <item>275</item>
+        <item>280</item>
+        <item>285</item>
+        <item>290</item>
+        <item>295</item>
+        <item>300+</item>
+    </string-array>
+    <string-array name="reps">
+        <item>Reps</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="sets">
+        <item>Sets</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
 </resources>
