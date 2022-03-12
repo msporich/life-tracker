@@ -7,16 +7,17 @@ import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 
-class MoodsListViewModel : ViewModel() {
+class MoodsListViewModel(userId: String) : ViewModel() {
 
     private val moods = MutableLiveData<List<Mood>>()
 
     init {
-        loadMoods()
+        loadMoods(userId)
     }
 
-    private fun loadMoods() {
+    private fun loadMoods(userId: String) {
         val db = FirebaseFirestore.getInstance().collection("moods")
+            .whereEqualTo("userId", userId)
             .orderBy("dateCreated", Query.Direction.DESCENDING)
 
         db.addSnapshotListener{documents, exception ->

@@ -6,11 +6,16 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.activity.viewModels
+import androidx.lifecycle.ViewModelProvider
 import com.example.lifetracker.databinding.ActivityMoodsListBinding
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class MoodsListActivity : AppCompatActivity(), MoodsListViewAdapter.MoodItemListener {
 
     private lateinit var binding: ActivityMoodsListBinding
+    private lateinit var viewModel : MoodsListViewModel
+    private lateinit var viewModelFactory : MoodsViewModelFactory
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,15 +25,24 @@ class MoodsListActivity : AppCompatActivity(), MoodsListViewAdapter.MoodItemList
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val viewModel : MoodsListViewModel by viewModels()
+        val user = Firebase.auth.currentUser
 
-        viewModel.getMoods().observe( this, { moods ->
+        val userId = user?.uid
 
-            var recyclerViewAdapter = MoodsListViewAdapter(this, moods, this)
-            binding.moodsRecycler.adapter = recyclerViewAdapter
-            binding.moodsRecycler.layoutManager = LinearLayoutManager(this)
+        userId?.let {
 
-        })
+            viewModelFactory = MoodsViewModelFactory(userId)
+            viewModel = ViewModelProvider(this, viewModelFactory).get(MoodsListViewModel::class.java)
+            viewModel.getMoods().observe( this, { moods ->
+
+                var recyclerViewAdapter = MoodsListViewAdapter(this, moods, this)
+                binding.moodsRecycler.adapter = recyclerViewAdapter
+                binding.moodsRecycler.layoutManager = LinearLayoutManager(this)
+
+            })
+
+        }
+
     }
 
     override fun moodSelected(mood: Mood) {
