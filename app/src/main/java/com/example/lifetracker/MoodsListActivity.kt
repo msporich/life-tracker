@@ -11,6 +11,15 @@ import com.example.lifetracker.databinding.ActivityMoodsListBinding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
+/*
+* Moods List Activity
+*
+* Author: Mark Sporich, #200399323
+* Description: This activity shows all the user's previous
+*              mood entries in the database. It is connected
+*              to several classes that aid in this functionality.
+* */
+
 class MoodsListActivity : AppCompatActivity(), MoodsListViewAdapter.MoodItemListener {
 
     private lateinit var binding: ActivityMoodsListBinding

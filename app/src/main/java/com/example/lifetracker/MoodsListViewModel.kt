@@ -7,6 +7,15 @@ import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 
+/*
+* Moods List View Model
+*
+* Author: Mark Sporich, #200399323
+* Description: This class takes the Moods data from the database
+*              and assigns it to an array for use in the Moods List
+*              activity.
+* */
+
 class MoodsListViewModel(userId: String) : ViewModel() {
 
     private val moods = MutableLiveData<List<Mood>>()

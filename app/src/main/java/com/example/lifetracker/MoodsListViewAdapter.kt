@@ -1,15 +1,26 @@
 package com.example.lifetracker
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+
+/*
+* Moods List View Adapter
+*
+* Author: Mark Sporich, #200399323
+* Description: This class helps assign different entries from the moods list
+*              to elements of the item_mood xml file.
+* */
 
 class MoodsListViewAdapter (val context: Context, val moods: List<Mood>, val itemListener: MoodItemListener): RecyclerView.Adapter<MoodsListViewAdapter.MoodViewHolder>() {
 
     inner class MoodViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+        val moodItem = itemView.findViewById<LinearLayout>(R.id.moodItem)
         val moodType = itemView.findViewById<TextView>(R.id.moodType)
         val moodDate = itemView.findViewById<TextView>(R.id.moodDate)
     }
@@ -23,6 +34,12 @@ class MoodsListViewAdapter (val context: Context, val moods: List<Mood>, val ite
     override fun onBindViewHolder(viewHolder: MoodViewHolder, position: Int) {
         val mood = moods[position]
         with (viewHolder) {
+            when {
+                mood.moodType.equals("neutral") -> moodItem.setBackgroundColor(Color.parseColor("#d2e0ac"))
+                mood.moodType.equals("happy") -> moodItem.setBackgroundColor(Color.parseColor("#52cf50"))
+                mood.moodType.equals("sad") -> moodItem.setBackgroundColor(Color.parseColor("#50aecf"))
+                mood.moodType.equals("angry") -> moodItem.setBackgroundColor(Color.parseColor("#cf7150"))
+            }
             moodType.text = mood.moodType
             moodDate.text = mood.dateCreated
             itemView.setOnClickListener {
