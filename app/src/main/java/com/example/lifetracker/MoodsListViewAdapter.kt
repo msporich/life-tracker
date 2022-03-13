@@ -35,10 +35,10 @@ class MoodsListViewAdapter (val context: Context, val moods: List<Mood>, val ite
         val mood = moods[position]
         with (viewHolder) {
             when {
-                mood.moodType.equals("neutral") -> moodItem.setBackgroundColor(Color.parseColor("#d2e0ac"))
-                mood.moodType.equals("happy") -> moodItem.setBackgroundColor(Color.parseColor("#52cf50"))
-                mood.moodType.equals("sad") -> moodItem.setBackgroundColor(Color.parseColor("#50aecf"))
-                mood.moodType.equals("angry") -> moodItem.setBackgroundColor(Color.parseColor("#cf7150"))
+                mood.moodType.equals("neutral") -> moodItem.setBackgroundResource(R.drawable.yellow_rounded_background)
+                mood.moodType.equals("happy") -> moodItem.setBackgroundResource(R.drawable.green_rounded_background)
+                mood.moodType.equals("sad") -> moodItem.setBackgroundResource(R.drawable.blue_rounded_background)
+                mood.moodType.equals("angry") -> moodItem.setBackgroundResource(R.drawable.red_rounded_background)
             }
             moodType.text = mood.moodType
             moodDate.text = mood.dateCreated
