@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeTracker">
         <activity
+            android:name=".MoodEditing"
+            android:exported="true" />
+        <activity
             android:name=".MoodsListActivity"
             android:exported="true" />
         <activity

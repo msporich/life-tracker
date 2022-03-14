@@ -54,14 +54,26 @@ class MoodsListActivity : AppCompatActivity(), MoodsListViewAdapter.MoodItemList
 
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
+    override fun onBackPressed() {
+
+        var intent = Intent(this, MoodActivity::class.java)
+        startActivity(intent)
+        this.finish()
+
+    }
+
     override fun moodSelected(mood: Mood) {
 
-        //val intent = Intent(this, thread::class.java)
-        //intent.putExtra("topicId", topic.id)
-        //intent.putExtra("topicTitle", topic.title)
-        //startActivity(intent)
-
-        Toast.makeText(this, "PLACEHOLDER. USER HAS CLICKED ON MOOD.", Toast.LENGTH_LONG).show()
+        val intent = Intent(this, MoodEditing::class.java)
+        intent.putExtra("moodId", mood.id)
+        intent.putExtra("moodType", mood.moodType)
+        intent.putExtra("moodDate", mood.dateCreated)
+        startActivity(intent)
 
     }
 
