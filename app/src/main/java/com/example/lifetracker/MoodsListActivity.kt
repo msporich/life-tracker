@@ -52,6 +52,12 @@ class MoodsListActivity : AppCompatActivity(), MoodsListViewAdapter.MoodItemList
 
         }
 
+        binding.button3.setOnClickListener {
+
+            Toast.makeText(this, "Graphs are under construction. Sorry!", Toast.LENGTH_LONG).show()
+
+        }
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
