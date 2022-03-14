@@ -11,6 +11,8 @@ class FitnessHomePageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFitnessHomePageBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //buttons for changing activities
         binding.buttonViewExercises.setOnClickListener {
             var intent = Intent(this, GridRecyclerActivity::class.java)
             startActivity(intent)

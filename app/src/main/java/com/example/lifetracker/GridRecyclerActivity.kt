@@ -17,14 +17,14 @@ class GridRecyclerActivity : AppCompatActivity(), GridAdapter.WorkoutItemListene
             var intent = Intent(this, FitnessHomePageActivity::class.java)
             startActivity(intent)
         }
-
+        //using the view model
         val viewModel: WorkoutListViewModel by viewModels()
         viewModel.getWorkouts().observe(this) { workouts ->
             var gridAdapter = GridAdapter(this, workouts, this)
             binding.gridRecyclerView.adapter = gridAdapter
         }
     }
-        override fun workoutSelected(workout: Workout) {
+        override fun workoutSelected(workout: Workout) { //loads workout values created into detailed view
             val intent = Intent(this, WorkoutDetailActivity::class.java)
             intent.putExtra("workoutId", workout.workoutId)
             intent.putExtra("exerciseName", workout.exerciseName)

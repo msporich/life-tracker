@@ -10,7 +10,7 @@ class WorkoutDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityWorkoutDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        //gets the workout values
         binding.txtViewExerciseDetail.text = intent.getStringExtra("exerciseName")
         binding.txtViewEquipmentDetail.text = intent.getStringExtra("equipment")
         binding.txtViewWeightDetail.text = intent.getStringExtra("weight")

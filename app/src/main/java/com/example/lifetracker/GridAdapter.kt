@@ -11,7 +11,7 @@ class GridAdapter(val context : Context,
                   val workouts : List<Workout>, val itemListener: WorkoutItemListener) : RecyclerView.Adapter<GridAdapter.WorkoutViewHolder>() {
 
     inner class WorkoutViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-        val textViewExercise = itemView.findViewById<TextView>(R.id.textViewExercise)
+        val textViewExercise = itemView.findViewById<TextView>(R.id.textViewExercise)//locating the text views from the item_grid_workout file
         val textViewDate = itemView.findViewById<TextView>(R.id.textViewDate)
     }
 
@@ -27,12 +27,12 @@ class GridAdapter(val context : Context,
         viewHolder.textViewDate.text = workout.dateCreated
 
         viewHolder.itemView.setOnClickListener {
-            itemListener.workoutSelected(workout)
+            itemListener.workoutSelected(workout) //using the function workoutSelected that loads the values into the detailed view
         }
     }
 
     override fun getItemCount(): Int {
-        return workouts.size
+        return workouts.size//gets all the workouts
     }
 
     interface WorkoutItemListener {

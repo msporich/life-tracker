@@ -15,7 +15,7 @@ class WorkoutListViewModel : ViewModel(){
 
     private fun loadWorkouts() {
         val db = FirebaseFirestore.getInstance().collection("workouts")
-            .orderBy("dateCreated", Query.Direction.ASCENDING)
+            .orderBy("dateCreated", Query.Direction.ASCENDING)//gets the collection workouts ordered by dateCreated
         db.addSnapshotListener{ documents, exception ->
             exception?.let {
                 Log.i("DB_Response", "Listen Failed : "+ exception)
@@ -28,7 +28,7 @@ class WorkoutListViewModel : ViewModel(){
                 for (document in documents) {
                     try {
                         val workout = document.toObject(Workout::class.java)
-                        workoutList.add(workout)
+                        workoutList.add(workout)//add the workout as an object to the workout list (which is an array of workout objects)
                     } catch(e : Exception)
                     {
                         Log.i("DB_Response", document.toString())
@@ -40,6 +40,6 @@ class WorkoutListViewModel : ViewModel(){
     }
 
     fun getWorkouts() : LiveData<List<Workout>> {
-        return workouts
+        return workouts //returns the workoutlist
     }
 }
