@@ -67,23 +67,24 @@
         android:id="@+id/addMoodButton"
         android:layout_width="370dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="144dp"
         android:text="Add Mood for Today"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/viewMoodsButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodGroup"
+        app:layout_constraintVertical_bias="0.568" />
 
     <Button
         android:id="@+id/viewMoodsButton"
         android:layout_width="370dp"
         android:layout_height="49dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginBottom="132dp"
         android:text="View Previous Mood Entries"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addMoodButton" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
