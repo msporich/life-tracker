@@ -29,11 +29,12 @@ class SleepActivity : AppCompatActivity() {
 
         binding.backFAB.setOnClickListener {
             startActivity(Intent(this, ModulesActivity::class.java))
+        }
 
         binding.button2.setOnClickListener {
-            if (binding.editTextDate.text.toString().isNotEmpty() &&
-                binding.editTextTime.text.toString().isNotEmpty() &&
-                binding.editTextTime2.text.toString().isNotEmpty()
+            if (binding.editTextDate.text.toString().isEmpty() &&
+                binding.editTextTime.text.toString().isEmpty() &&
+                binding.editTextTime2.text.toString().isEmpty()
 
             ) {
                 Toast.makeText(this, "Please fill in all boxes.", Toast.LENGTH_LONG).show()
@@ -74,4 +75,4 @@ class SleepActivity : AppCompatActivity() {
             }
         }
     }
-}
+
