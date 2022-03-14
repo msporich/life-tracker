@@ -10,21 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeTracker">
         <activity
-            android:name=".CaloriesActivity"
+            android:name=".SettingsActivity"
             android:exported="true"
             android:parentActivityName=".ModulesActivity"/>
+        <activity
+            android:name=".CaloriesActivity"
+            android:exported="true"
+            android:parentActivityName=".ModulesActivity" />
         <activity
             android:name=".MoodActivity"
             android:exported="true"
-            android:parentActivityName=".ModulesActivity"/>
+            android:parentActivityName=".ModulesActivity" />
         <activity
             android:name=".FitnessActivity"
             android:exported="true"
-            android:parentActivityName=".ModulesActivity"/>
+            android:parentActivityName=".ModulesActivity" />
         <activity
             android:name=".SleepActivity"
             android:exported="true"
-            android:parentActivityName=".ModulesActivity"/>
+            android:parentActivityName=".ModulesActivity" />
         <activity
             android:name=".ModulesActivity"
             android:exported="true" />
