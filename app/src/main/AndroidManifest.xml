@@ -10,8 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeTracker">
         <activity
+            android:name=".WorkoutDetailActivity"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".FitnessHomePageActivity"
             android:exported="true">
+
         </activity>
         <activity
             android:name=".GridRecyclerActivity"
@@ -35,15 +40,15 @@
         <activity
             android:name=".ModulesActivity"
             android:exported="true">
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
         </activity>
     </application>
 

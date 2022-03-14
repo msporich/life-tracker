@@ -12,6 +12,8 @@
     <string name="view_exercises">View Exercises</string>
     <string name="register_new_exercise">Register New Exercise</string>
     <string name="enter_the_values_below">Enter the values below</string>
+    <string name="squats">Squats</string>
+    <string name="barbell">Barbell</string>
     <string-array name="weight">
         <item>Weight</item>
         <item>5</item>

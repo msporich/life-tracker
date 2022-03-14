@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class GridAdapter(val context : Context,
-                  val workouts : List<Workout>/*, val itemListener: WorkoutItemListener*/) : RecyclerView.Adapter<GridAdapter.WorkoutViewHolder>() {
+                  val workouts : List<Workout>, val itemListener: WorkoutItemListener) : RecyclerView.Adapter<GridAdapter.WorkoutViewHolder>() {
 
     inner class WorkoutViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         val textViewExercise = itemView.findViewById<TextView>(R.id.textViewExercise)
@@ -26,16 +26,16 @@ class GridAdapter(val context : Context,
         viewHolder.textViewExercise.text = workout.exerciseName
         viewHolder.textViewDate.text = workout.dateCreated
 
-        /*viewHolder.itemView.setOnClickListener {
+        viewHolder.itemView.setOnClickListener {
             itemListener.workoutSelected(workout)
-        }*/
+        }
     }
 
     override fun getItemCount(): Int {
         return workouts.size
     }
 
-    /*interface WorkoutItemListener {
+    interface WorkoutItemListener {
         fun workoutSelected( workout : Workout)
-    }*/
+    }
 }

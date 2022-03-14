@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import com.example.lifetracker.databinding.ActivityGridRecyclerBinding
 
-class GridRecyclerActivity : AppCompatActivity() {
+class GridRecyclerActivity : AppCompatActivity(), GridAdapter.WorkoutItemListener {
     private lateinit var binding : ActivityGridRecyclerBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,8 +20,18 @@ class GridRecyclerActivity : AppCompatActivity() {
 
         val viewModel: WorkoutListViewModel by viewModels()
         viewModel.getWorkouts().observe(this) { workouts ->
-            var gridAdapter = GridAdapter(this, workouts)
+            var gridAdapter = GridAdapter(this, workouts, this)
             binding.gridRecyclerView.adapter = gridAdapter
         }
     }
-}
+        override fun workoutSelected(workout: Workout) {
+            val intent = Intent(this, WorkoutDetailActivity::class.java)
+            intent.putExtra("workoutId", workout.workoutId)
+            intent.putExtra("exerciseName", workout.exerciseName)
+            intent.putExtra("equipment", workout.equipment)
+            intent.putExtra("weight", workout.weight.toString())
+            intent.putExtra("reps", workout.reps.toString())
+            intent.putExtra("sets", workout.sets.toString())
+            startActivity(intent)
+        }
+    }
