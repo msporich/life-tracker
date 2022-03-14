@@ -7,4 +7,4 @@ class Food (var id: String?=null,
             var foodName: String?=null,
             var foodCalories: Int?=null,
             var foodCategory: String?=null,
-            var dateConsumed: Date?=null)
+            var dateConsumed: String?=null)
