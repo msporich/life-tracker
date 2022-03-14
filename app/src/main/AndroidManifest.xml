@@ -28,6 +28,12 @@
             android:name=".GridRecyclerActivity"
             android:exported="false" />
         <activity
+            android:name=".CaloriesActivity" />
+        <activity
+            android:name=".SettingsActivity" 
+            android:exported="true"
+            android:parentActivityName=".ModulesActivity" />
+        <activity
             android:name=".CaloriesActivity"
             android:exported="true"
             android:parentActivityName=".ModulesActivity" />
