@@ -30,6 +30,10 @@ class ModulesActivity : AppCompatActivity() {
             var intent = Intent(this, SleepActivity::class.java)
             startActivity(intent)
         }
+        binding.buttonSettings.setOnClickListener {
+            var intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 
