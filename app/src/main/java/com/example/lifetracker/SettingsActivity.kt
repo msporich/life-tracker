@@ -15,6 +15,8 @@ class SettingsActivity : AppCompatActivity() {
 
         this.setTitle("Settings")
 
+        binding.userSettingsImage.bringToFront()
+
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
