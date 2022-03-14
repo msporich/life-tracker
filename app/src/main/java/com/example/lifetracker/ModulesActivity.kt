@@ -19,7 +19,7 @@ class ModulesActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.buttonFitness.setOnClickListener {
-            var intent = Intent(this, FitnessActivity::class.java)
+            var intent = Intent(this, FitnessHomePageActivity::class.java)
             startActivity(intent)
         }
         binding.buttonMood.setOnClickListener {
