@@ -4,12 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Desktop/Development/AndroidProjects/LifeTracker/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Projects/life-tracker/app/src/main/res/layout/activity_calories.xml" value="0.4470108695652174" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_modules.xml" value="0.264" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
