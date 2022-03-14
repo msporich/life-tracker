@@ -30,11 +30,16 @@
         <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/layout/activity_sleep.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/layout/activity_workout_detail.xml" value="0.264" />
         <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/layout/item_grid_workout.xml" value="0.24547101449275363" />
+        <entry key="app/src/main/res/layout/activity_calories.xml" value="0.3171875" />
+        <entry key="app/src/main/res/layout/activity_fitness.xml" value="0.3171875" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3171875" />
+        <entry key="app/src/main/res/layout/activity_modules.xml" value="0.3171875" />
+        <entry key="app/src/main/res/layout/activity_mood.xml" value="0.3171875" />
+        <entry key="app/src/main/res/layout/activity_sleep.xml" value="0.3171875" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
