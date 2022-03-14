@@ -10,13 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeTracker">
         <activity
-<<<<<<< HEAD
             android:name=".MoodEditing"
             android:exported="true" />
         <activity
             android:name=".MoodsListActivity"
-            android:exported="true" />
-=======
+            android:exported="true"/>
+        <activity
             android:name=".WorkoutDetailActivity"
             android:exported="true">
         </activity>
@@ -28,7 +27,6 @@
         <activity
             android:name=".GridRecyclerActivity"
             android:exported="false" />
->>>>>>> Fitness-Tracker
         <activity
             android:name=".CaloriesActivity"
             android:exported="true"
