@@ -6,13 +6,19 @@
         <entry key="..\:/Desktop/Development/AndroidProjects/LifeTracker/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_modules.xml" value="0.264" />
+        <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/drawable/background.xml" value="0.236" />
+        <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/drawable/background_selected.xml" value="0.236" />
+        <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/drawable/grid_item_selector.xml" value="0.236" />
         <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/drawable/ic_baseline_keyboard_backspace_24.xml" value="0.236" />
         <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/layout/activity_calories.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/layout/activity_fitness.xml" value="0.2" />
+        <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/layout/activity_fitness_home_page.xml" value="0.18617021276595744" />
+        <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/layout/activity_grid_recycler.xml" value="0.18421052631578946" />
         <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/layout/activity_main.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/layout/activity_modules.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/layout/activity_mood.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/layout/activity_sleep.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/bensc/StudioProjects/life-tracker/app/src/main/res/layout/item_grid_workout.xml" value="0.24547101449275363" />
       </map>
     </option>
   </component>

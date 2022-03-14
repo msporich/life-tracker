@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_font_size">45sp</dimen>
+    <dimen name="standard_margin">10dp</dimen>
+    <dimen name="reg_font_size">20sp</dimen>
+    <dimen name="grid_padding">5dp</dimen>
+</resources>
