@@ -1,5 +1,6 @@
 package com.example.lifetracker
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.lifetracker.databinding.ActivityWorkoutDetailBinding
@@ -16,5 +17,9 @@ class WorkoutDetailActivity : AppCompatActivity() {
         binding.txtViewWeightDetail.text = intent.getStringExtra("weight")
         binding.txtViewRepsDetail.text = intent.getStringExtra("reps")
         binding.txtViewSetsDetail.text = intent.getStringExtra("sets")
+
+        binding.buttonBackDetail.setOnClickListener {
+            startActivity(Intent(this, GridRecyclerActivity::class.java))
+        }
     }
 }
