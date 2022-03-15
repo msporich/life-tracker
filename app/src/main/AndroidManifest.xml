@@ -11,7 +11,8 @@
         android:theme="@style/Theme.LifeTracker">
         <activity
             android:name=".ProfileSettingsActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".SettingsActivity"/>
         <activity
             android:name=".MoodEditing"
             android:exported="true" />

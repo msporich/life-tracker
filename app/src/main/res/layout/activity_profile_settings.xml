@@ -6,4 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".ProfileSettingsActivity">
 
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:hint="User Name"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toEndOf="@+id/nameText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userEmailID"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:hint="User Email ID"
+        app:layout_constraintStart_toEndOf="@+id/emailText"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="40dp"
+        android:ems="5"
+        android:layout_marginLeft="20dp"
+        android:inputType="textPersonName"
+        android:text="Name :"
+        android:background="@null"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:ems="5"
+        android:background="@null"
+        android:inputType="textPersonName"
+        android:text="Email :"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
