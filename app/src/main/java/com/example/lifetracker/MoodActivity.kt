@@ -102,4 +102,18 @@ class MoodActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
+    override fun onBackPressed() {
+
+        var intent = Intent(this, ModulesActivity::class.java)
+        startActivity(intent)
+        this.finish()
+
+    }
+
 }
