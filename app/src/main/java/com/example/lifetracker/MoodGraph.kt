@@ -1,16 +1,26 @@
 package com.example.lifetracker
 
 import android.content.Intent
+import android.graphics.Color.WHITE
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.example.lifetracker.databinding.ActivityMoodGraphBinding
+import com.github.mikephil.charting.data.BarData
+import com.github.mikephil.charting.data.BarEntry
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import com.jjoe64.graphview.series.BarGraphSeries
 import com.jjoe64.graphview.series.DataPoint
+import com.github.mikephil.charting.data.BarDataSet
+import com.github.mikephil.charting.formatter.ValueFormatter
+import com.github.mikephil.charting.components.AxisBase
+
+
+
+
 
 class MoodGraph : AppCompatActivity() {
 
@@ -25,10 +35,10 @@ class MoodGraph : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         //counter variables for use in creating graph
-        var happyCounter = 0
-        var sadCounter = 0
-        var angryCounter = 0
-        var neutralCounter = 0
+        var happyCounter = 0f
+        var sadCounter = 0f
+        var angryCounter = 0f
+        var neutralCounter = 0f
 
         var moodList = ArrayList<Mood>()
 
@@ -61,7 +71,37 @@ class MoodGraph : AppCompatActivity() {
                 }
 
                 Log.d("Current page position", "After For Loop")
+
+                //generating the graph
                 val graph = binding.moodGraph
+
+                val entries: MutableList<BarEntry> = ArrayList()
+                entries.add(BarEntry(0f, happyCounter))
+                entries.add(BarEntry(1f, sadCounter))
+                entries.add(BarEntry(2f, angryCounter))
+                entries.add(BarEntry(3f, neutralCounter))
+                val set = BarDataSet(entries, "Total Mood Counts")
+
+                val data = BarData(set)
+                data.setBarWidth(0.9f)
+                graph.setData(data)
+                graph.setFitBars(true)
+                graph.setBackgroundColor(WHITE)
+
+                //formatting labels
+                val moodLabels = arrayOf("Happy", "Sad", "Angry", "Neutral")
+
+                val formatter: ValueFormatter = object : ValueFormatter() {
+                    override fun getAxisLabel(value: Float, axis: AxisBase): String {
+                        return moodLabels.get(value.toInt())
+                    }
+                }
+
+                val xAxis = graph.getXAxis()
+                xAxis.setGranularity(1f)
+                xAxis.setValueFormatter(formatter)
+                graph.invalidate() //refreshes the graph
+
 
             }
             .addOnFailureListener {
