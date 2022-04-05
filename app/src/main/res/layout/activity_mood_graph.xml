@@ -6,4 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MoodGraph">
 
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/moodGraph"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:layout_alignParentTop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
