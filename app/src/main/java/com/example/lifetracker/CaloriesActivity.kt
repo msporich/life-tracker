@@ -12,9 +12,18 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class CaloriesActivity : AppCompatActivity() {
 
+    private lateinit var saveData: SaveData
     private lateinit var binding: ActivityCaloriesBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        saveData = SaveData(this)
+        if (saveData.loadDarkModeState() == true) {
+            setTheme(R.style.Theme_LifeTrackerNight)
+        } else {
+            setTheme(R.style.Theme_LifeTracker)
+        }
+
         super.onCreate(savedInstanceState)
         binding = ActivityCaloriesBinding.inflate(layoutInflater)
         setContentView(binding.root)

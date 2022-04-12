@@ -15,9 +15,18 @@ import java.util.*
 class SleepActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySleepBinding
+    private lateinit var saveData: SaveData
 
     @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        saveData = SaveData(this)
+        if (saveData.loadDarkModeState() == true) {
+            setTheme(R.style.Theme_LifeTrackerNight)
+        } else {
+            setTheme(R.style.Theme_LifeTracker)
+        }
+
         super.onCreate(savedInstanceState)
 
         binding = ActivitySleepBinding.inflate(layoutInflater)

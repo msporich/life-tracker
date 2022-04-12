@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SleepActivity">
+    tools:context=".SleepActivity"
+    android:background="?attr/bgColor">
 
     <TextView
         android:id="@+id/textView2"
@@ -27,6 +28,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:textColorHint="?attr/textColorHint"
+        android:backgroundTint="?attr/textColorHint"
+        android:textColor="?attr/textColor"
         android:hint="@string/enter_date_yyyy_mm_dd"
         android:inputType="date"
         android:textAlignment="center"
@@ -43,6 +47,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:textColorHint="?attr/textColorHint"
+        android:backgroundTint="?attr/textColorHint"
+        android:textColor="?attr/textColor"
         android:hint="@string/enter_sleep_start_time"
         android:inputType="time"
         android:textAlignment="center"
@@ -59,6 +66,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:textColorHint="?attr/textColorHint"
+        android:backgroundTint="?attr/textColorHint"
+        android:textColor="?attr/textColor"
         android:hint="@string/enter_sleep_end_time"
         android:inputType="time"
         android:textAlignment="center"
