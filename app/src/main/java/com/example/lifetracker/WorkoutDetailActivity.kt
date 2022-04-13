@@ -21,5 +21,9 @@ class WorkoutDetailActivity : AppCompatActivity() {
         binding.buttonBackDetail.setOnClickListener {
             startActivity(Intent(this, GridRecyclerActivity::class.java))
         }
+
+        binding.buttonGraphView.setOnClickListener {
+            startActivity(Intent(this, WorkoutGraph::class.java))
+        }
     }
 }

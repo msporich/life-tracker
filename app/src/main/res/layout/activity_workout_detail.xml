@@ -66,7 +66,8 @@
         android:layout_marginBottom="4dp"
         android:hint="@string/barbell"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="40sp"
+        android:textFontWeight="20"
         app:layout_constraintBottom_toTopOf="@+id/txtViewWeightText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -105,7 +106,7 @@
         android:layout_marginBottom="8dp"
         android:hint="@string/squats"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="45sp"
         app:layout_constraintBottom_toTopOf="@+id/txtViewEquipmentDetail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -119,5 +120,15 @@
         android:layout_marginTop="444dp"
         android:text="Back"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonGraphView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="444dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/graph"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

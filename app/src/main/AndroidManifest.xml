@@ -10,25 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeTracker">
         <activity
+            android:name=".WorkoutGraph"
+            android:exported="false" />
+        <activity
             android:name=".MoodEditing"
             android:exported="true" />
         <activity
             android:name=".MoodsListActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".WorkoutDetailActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".FitnessHomePageActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".GridRecyclerActivity"
             android:exported="false" />
         <activity
-            android:name=".SettingsActivity" 
+            android:name=".SettingsActivity"
             android:exported="true"
             android:parentActivityName=".ModulesActivity" />
         <activity
@@ -49,8 +49,7 @@
             android:parentActivityName=".ModulesActivity" />
         <activity
             android:name=".ModulesActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
