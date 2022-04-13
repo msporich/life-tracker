@@ -43,9 +43,9 @@ class WorkoutGraph : AppCompatActivity() {
                 }
 
                 for (workout in workoutList) {
-                    weightCounter += workout.weight!!
-                    repsCounter += workout.reps!!
-                    setsCounter += workout.sets!!
+                    weightCounter += workout.weight!!.toFloat()
+                    repsCounter += workout.reps!!.toFloat()
+                    setsCounter += workout.sets!!.toFloat()
                 }
 
                 val graph = binding.workoutGraph
