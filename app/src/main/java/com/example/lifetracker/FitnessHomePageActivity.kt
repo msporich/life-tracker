@@ -21,5 +21,9 @@ class FitnessHomePageActivity : AppCompatActivity() {
             var intent = Intent(this, FitnessActivity::class.java)
             startActivity(intent)
         }
+        binding.buttonGoBack.setOnClickListener {
+            var intent = Intent(this, ModulesActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

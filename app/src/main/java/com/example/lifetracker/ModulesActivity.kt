@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.lifetracker.databinding.ActivityModulesBinding
+import com.firebase.ui.auth.AuthUI
 
 class ModulesActivity : AppCompatActivity() {
 
@@ -33,6 +34,14 @@ class ModulesActivity : AppCompatActivity() {
         binding.buttonSettings.setOnClickListener {
             var intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.buttonLogout.setOnClickListener{
+            AuthUI.getInstance()
+                .signOut(this)
+                .addOnCompleteListener {
+                    startActivity(Intent(this, MainActivity::class.java))
+                }
         }
     }
 

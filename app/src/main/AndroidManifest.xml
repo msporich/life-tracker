@@ -10,11 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeTracker">
         <activity
-<<<<<<< Updated upstream
-=======
+
             android:name=".SleepGraph"
             android:exported="true" />
         <activity
+
             android:name=".SleepList"
             android:exported="true"
             android:label="@string/title_activity_sleep_list"
@@ -24,28 +24,23 @@
             android:exported="true"
             android:parentActivityName=".SettingsActivity" />
         <activity
->>>>>>> Stashed changes
+
             android:name=".MoodEditing"
             android:exported="true" />
         <activity
             android:name=".MoodsListActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".WorkoutDetailActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".FitnessHomePageActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".GridRecyclerActivity"
             android:exported="false" />
         <activity
-            android:name=".CaloriesActivity" />
-        <activity
-            android:name=".SettingsActivity" 
+            android:name=".SettingsActivity"
             android:exported="true"
             android:parentActivityName=".ModulesActivity" />
         <activity
@@ -66,8 +61,7 @@
             android:parentActivityName=".ModulesActivity" />
         <activity
             android:name=".ModulesActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

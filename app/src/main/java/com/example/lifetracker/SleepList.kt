@@ -2,17 +2,23 @@ package com.example.lifetracker
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.lifetracker.databinding.ActivitySleepBinding
+import com.example.lifetracker.databinding.ActivitySleepListBinding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
 import java.util.*
 
-class SleepActivity : AppCompatActivity() {
+class SleepList : AppCompatActivity() {
 
     private lateinit var binding: ActivitySleepBinding
 
@@ -31,20 +37,9 @@ class SleepActivity : AppCompatActivity() {
             startActivity(Intent(this, ModulesActivity::class.java))
         }
 
-
-        binding.button4.setOnClickListener {
-            startActivity(Intent(this, SleepListActivity::class.java))
+        binding.button4.setOnClickListener{
+            startActivity(Intent(this, SleepList::class.java))
         }
-
-        binding.button5.setOnClickListener {
-            startActivity(Intent(this, SleepGraph::class.java))
-        }
-
-
-        //binding.button4.setOnClickListener {
-            //startActivity(Intent(this, SleepListActivity::class.java))
-        //}
-
 
         binding.button2.setOnClickListener {
             if (binding.editTextDate.text.toString().isEmpty() &&
@@ -84,10 +79,7 @@ class SleepActivity : AppCompatActivity() {
 
                     }
             }
-
-
-
-            }
         }
     }
+}
 
