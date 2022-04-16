@@ -1,5 +1,6 @@
 package com.example.lifetracker
 
+import android.content.Intent
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -67,6 +68,14 @@ class CaloriesActivity : AppCompatActivity() {
                 binding.linearLayout.addView(textViewFoodCategory)
                 binding.linearLayout.addView(textViewDateConsumed)
                 binding.linearLayout.addView(textViewWhiteSpace)
+            }
+
+            // TODO: REMOVE THIS LATER
+//            val intent = Intent(this, CaloriesAddNewActivity::class.java);
+//            startActivity(intent);
+
+            binding.fabAddNewCalorie.setOnClickListener{
+                startActivity(Intent(this, CaloriesAddNewActivity::class.java))
             }
 
         }
