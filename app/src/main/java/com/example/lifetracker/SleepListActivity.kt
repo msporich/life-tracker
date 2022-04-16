@@ -1,6 +1,8 @@
 package com.example.lifetracker
 
+import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,11 +10,15 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import java.lang.Exception
 
-class SleepListActivity : ViewModel(){
+class SleepListActivity : AppCompatActivity()
     private val sleep = MutableLiveData<List<Sleep>>()
-    init {
-        loadSleeps()
-    }
+
+//override fun onCreate(savedInstanceState: Bundle?) {
+  //  super.onCreate(savedInstanceState)
+
+    //init {
+      //  loadSleeps()
+    //}
 
     private fun loadSleeps() {
         val db = FirebaseFirestore.getInstance().collection("sleep")
@@ -43,4 +49,3 @@ class SleepListActivity : ViewModel(){
     fun getSleeps() : LiveData<List<Sleep>> {
         return sleep
     }
-}

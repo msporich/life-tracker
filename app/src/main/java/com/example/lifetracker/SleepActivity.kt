@@ -33,16 +33,11 @@ class SleepActivity : AppCompatActivity() {
 
 
         binding.button4.setOnClickListener {
-            startActivity(Intent(this, SleepListActivity::class.java))
+            startActivity(Intent(this, SleepListingActivity::class.java))
         }
 
-        binding.button5.setOnClickListener {
-            startActivity(Intent(this, SleepGraph::class.java))
-        }
-
-
-        //binding.button4.setOnClickListener {
-            //startActivity(Intent(this, SleepListActivity::class.java))
+        //binding.button5.setOnClickListener {
+        //    startActivity(Intent(this, SleepGraph::class.java))
         //}
 
 
