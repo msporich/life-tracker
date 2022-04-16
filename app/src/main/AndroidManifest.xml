@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeTracker">
         <activity
+            android:name=".CaloriesDetailsActivity"
+            android:exported="true"
+            android:parentActivityName=".CaloriesRecyclerActivity" />
+        <activity
             android:name=".CaloriesRecyclerActivity"
             android:exported="true"
             android:parentActivityName=".ModulesActivity" />

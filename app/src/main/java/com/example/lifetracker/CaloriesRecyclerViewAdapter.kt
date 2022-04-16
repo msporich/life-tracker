@@ -1,6 +1,7 @@
 package com.example.lifetracker
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +28,11 @@ class CaloriesRecyclerViewAdapter (val context : Context,
         val food = foodList[position]
         viewHolder.textViewFoodName.text = food.foodName
         viewHolder.textViewCaloriesAmount.text = food.foodCalories.toString() + " cal"
-        viewHolder.textViewDateConsumed.text = food.dateConsumed.toString()
+        val dateConsumed = food.dateConsumed.toString()
+        val dateConsumedSbstr1 = dateConsumed.subSequence(0, 10).toString()
+        val dateConsumedSbstr2 = dateConsumed.subSequence(24, 28).toString()
+        val dateConsumedFormatted = "$dateConsumedSbstr1, $dateConsumedSbstr2"
+        viewHolder.textViewDateConsumed.text = dateConsumedFormatted
 
         viewHolder.itemView.setOnClickListener {
             itemListener.foodSelected(food)

@@ -18,6 +18,7 @@ class CaloriesRecyclerActivity : AppCompatActivity(), CaloriesRecyclerViewAdapte
         super.onCreate(savedInstanceState)
         binding = ActivityCaloriesRecyclerBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // Check current user
         val currentUser = FirebaseAuth.getInstance().uid
@@ -64,6 +65,13 @@ class CaloriesRecyclerActivity : AppCompatActivity(), CaloriesRecyclerViewAdapte
 
     override fun foodSelected(food: Food) {
         Log.d("Food Selected", food.foodName.toString())
+        val intent = Intent(this, CaloriesDetailsActivity::class.java)
+        intent.putExtra("foodId", food.id)
+        intent.putExtra("foodName", food.foodName)
+        intent.putExtra("foodCalories", food.foodCalories.toString())
+        intent.putExtra("foodCategory", food.foodCategory)
+        intent.putExtra("dateConsumed", food.dateConsumed.toString())
+        startActivity(intent)
     }
 
 }
