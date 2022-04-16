@@ -1,5 +1,6 @@
 package com.example.lifetracker
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +8,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.lifetracker.databinding.ActivityCaloriesRecyclerBinding
 import com.google.firebase.auth.FirebaseAuth
+import java.util.*
 
 class CaloriesRecyclerActivity : AppCompatActivity(), CaloriesRecyclerViewAdapter.FoodItemListener {
 
@@ -29,8 +31,33 @@ class CaloriesRecyclerActivity : AppCompatActivity(), CaloriesRecyclerViewAdapte
 
         val viewModel : CaloriesViewModel by viewModels()
         viewModel.getCaloriesList().observe(this) { foodList ->
+            var totalCaloriesToday = 0;
+            for (food in foodList) {
+                // Compare date consumed to today's date
+                val now = Calendar.getInstance()
+                val consumed = Calendar.getInstance()
+                consumed.time = food.dateConsumed!!
+
+                val todayDayOfYear = now.get(Calendar.DAY_OF_YEAR)
+                val todayYear = now.get(Calendar.YEAR)
+                val consumedDayOfYear = consumed.get(Calendar.DAY_OF_YEAR)
+                val consumedYear = consumed.get(Calendar.YEAR)
+
+                // Add calories to running total if date consumed is today
+                if (todayYear == consumedYear && todayDayOfYear == consumedDayOfYear) {
+                    Log.d("match", food.foodCalories.toString())
+                    totalCaloriesToday += food.foodCalories!!
+                }
+            }
+
             var caloriesRecyclerViewAdapter = CaloriesRecyclerViewAdapter(this, foodList, this)
             binding.caloriesRecyclerView.adapter = caloriesRecyclerViewAdapter
+            binding.textViewCaloriesToday.text = totalCaloriesToday.toString()
+        }
+
+        // Add calorie data button
+        binding.fabAddNewCalorie.setOnClickListener{
+            startActivity(Intent(this, CaloriesAddNewActivity::class.java))
         }
 
     }

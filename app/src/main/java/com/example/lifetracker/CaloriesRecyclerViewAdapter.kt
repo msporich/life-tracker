@@ -26,7 +26,7 @@ class CaloriesRecyclerViewAdapter (val context : Context,
     override fun onBindViewHolder(viewHolder: CaloriesViewHolder, position: Int) {
         val food = foodList[position]
         viewHolder.textViewFoodName.text = food.foodName
-        viewHolder.textViewCaloriesAmount.text = food.foodCalories.toString()
+        viewHolder.textViewCaloriesAmount.text = food.foodCalories.toString() + " cal"
         viewHolder.textViewDateConsumed.text = food.dateConsumed.toString()
 
         viewHolder.itemView.setOnClickListener {

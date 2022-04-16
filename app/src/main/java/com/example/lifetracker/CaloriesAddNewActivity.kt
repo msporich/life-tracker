@@ -65,7 +65,7 @@ class CaloriesAddNewActivity : AppCompatActivity() {
                     db.document(food.id!!).set(food)
 
                     // Redirect to main calorie tracker activity and display toast
-                    val intent = Intent(this, CaloriesActivity::class.java)
+                    val intent = Intent(this, CaloriesRecyclerActivity::class.java)
                     intent.putExtra("toast", "Calorie data added")
                     startActivity(intent)
 
