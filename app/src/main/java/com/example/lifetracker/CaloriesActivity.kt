@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
+import android.widget.Toast
 import com.example.lifetracker.databinding.ActivityCaloriesBinding
 import com.example.lifetracker.databinding.ActivityFitnessBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -19,20 +20,29 @@ class CaloriesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCaloriesBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        // Check for and display toasts
+        val toast = intent.getStringExtra("toast")
+        if (toast != null) {
+            Toast.makeText(this, toast, Toast.LENGTH_LONG).show()
+        }
+
+        // Check current user
         val currentUser = FirebaseAuth.getInstance().uid
         Log.d("Current user", currentUser.toString())
 
+        // Connect to db
         val db = FirebaseFirestore.getInstance().collection("food")
         val query = db.get().addOnSuccessListener { documents ->
 
+            // Clear all views before refreshing
             binding.linearLayout.removeAllViews()
 
+            // Iterate through Food records in db
             for (document in documents) {
 
-                // Create food object from db
+                // Create food object from db record
                 val food = document.toObject(Food::class.java)
 
                 // Add data to views
@@ -44,9 +54,9 @@ class CaloriesActivity : AppCompatActivity() {
                 textViewFoodName.typeface = Typeface.DEFAULT_BOLD
 
                 // Calories
-                val textViewFoodCalories = TextView(this)
-                textViewFoodCalories.text = food.foodCalories.toString() + " Cal"
-                textViewFoodCalories.textSize = 16f
+                val textViewCaloriesAmount = TextView(this)
+                textViewCaloriesAmount.text = food.foodCalories.toString() + " Cal"
+                textViewCaloriesAmount.textSize = 16f
 
                 // Category
                 val textViewFoodCategory = TextView(this)
@@ -55,7 +65,7 @@ class CaloriesActivity : AppCompatActivity() {
 
                 // Date consumed
                 val textViewDateConsumed = TextView(this)
-                textViewDateConsumed.text = food.dateConsumed
+                textViewDateConsumed.text = food.dateConsumed.toString()
                 textViewDateConsumed.textSize = 16f
 
                 // Whitespace lol
@@ -64,7 +74,7 @@ class CaloriesActivity : AppCompatActivity() {
 
                 // Add views to layout
                 binding.linearLayout.addView(textViewFoodName)
-                binding.linearLayout.addView(textViewFoodCalories)
+                binding.linearLayout.addView(textViewCaloriesAmount)
                 binding.linearLayout.addView(textViewFoodCategory)
                 binding.linearLayout.addView(textViewDateConsumed)
                 binding.linearLayout.addView(textViewWhiteSpace)
