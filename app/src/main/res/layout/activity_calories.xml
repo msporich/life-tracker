@@ -15,13 +15,11 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="Calorie Tracker"
-        android:textStyle="bold"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 
 <!--    Total calories today-->
     <TextView
@@ -31,7 +29,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Total Calories Today"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/headingCalorieTracker" />
 
@@ -41,12 +40,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Total calories today"
-        android:textStyle="bold"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headingCaloriesToday" />
-
-
 
 <!--    Daily Target Progress-->
     <TextView
@@ -56,7 +52,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Daily Target Progress"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewCaloriesToday" />
 
@@ -66,7 +63,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Daily Target Progress"
-        android:textStyle="bold"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headingTargetProgress" />
@@ -79,20 +75,34 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:text="Food Log"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewTargetProgress" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/headingFoodLog"
-        app:layout_constraintBottom_toTopOf="@id/fabAddNewCalorie"></LinearLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headingFoodLog">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/headingFoodLog"
+            app:layout_constraintBottom_toTopOf="@id/fabAddNewCalorie">
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddNewCalorie"
