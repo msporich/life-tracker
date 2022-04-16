@@ -24,15 +24,15 @@ class CaloriesActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        // Check current user
+        val currentUser = FirebaseAuth.getInstance().uid
+        Log.d("Current user", currentUser.toString())
+
         // Check for and display toasts
         val toast = intent.getStringExtra("toast")
         if (toast != null) {
             Toast.makeText(this, toast, Toast.LENGTH_LONG).show()
         }
-
-        // Check current user
-        val currentUser = FirebaseAuth.getInstance().uid
-        Log.d("Current user", currentUser.toString())
 
         // Create instance of view model
         val viewModel : CaloriesViewModel by viewModels()
