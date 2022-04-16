@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.viewModels
 import com.example.lifetracker.databinding.ActivityCaloriesBinding
 import com.example.lifetracker.databinding.ActivityFitnessBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -33,20 +34,15 @@ class CaloriesActivity : AppCompatActivity() {
         val currentUser = FirebaseAuth.getInstance().uid
         Log.d("Current user", currentUser.toString())
 
-        // Connect to db
-        val db = FirebaseFirestore.getInstance().collection("food")
-        val query = db.get().addOnSuccessListener { documents ->
+        // Create instance of view model
+        val viewModel : CaloriesViewModel by viewModels()
+
+        // Get calories list from view model
+        viewModel.getCaloriesList().observe(this) { foodList ->
 
             var totalCaloriesToday = 0;
 
-            // Clear all views before refreshing
-            binding.linearLayout.removeAllViews()
-
-            // Iterate through Food records in db
-            for (document in documents) {
-
-                // Create food object from db record
-                val food = document.toObject(Food::class.java)
+            for (food in foodList) {
 
                 // Compare date consumed to today's date
                 val now = Calendar.getInstance()
@@ -98,18 +94,13 @@ class CaloriesActivity : AppCompatActivity() {
                 binding.linearLayout.addView(textViewDateConsumed)
                 binding.linearLayout.addView(textViewWhiteSpace)
             }
-
             binding.textViewCaloriesToday.text = totalCaloriesToday.toString()
+        }
 
-            // TODO: REMOVE THIS LATER
-//            val intent = Intent(this, CaloriesAddNewActivity::class.java);
-//            startActivity(intent);
-
-            binding.fabAddNewCalorie.setOnClickListener{
-                startActivity(Intent(this, CaloriesAddNewActivity::class.java))
-            }
-
+        binding.fabAddNewCalorie.setOnClickListener{
+            startActivity(Intent(this, CaloriesAddNewActivity::class.java))
         }
 
     }
+
 }
