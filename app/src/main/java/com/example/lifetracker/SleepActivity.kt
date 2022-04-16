@@ -31,6 +31,17 @@ class SleepActivity : AppCompatActivity() {
             startActivity(Intent(this, ModulesActivity::class.java))
         }
 
+<<<<<<< Updated upstream
+=======
+        binding.button4.setOnClickListener {
+            startActivity(Intent(this, SleepListActivity::class.java))
+        }
+
+        binding.button5.setOnClickListener {
+            startActivity(Intent(this, SleepGraph::class.java))
+        }
+
+>>>>>>> Stashed changes
         binding.button2.setOnClickListener {
             if (binding.editTextDate.text.toString().isEmpty() &&
                 binding.editTextTime.text.toString().isEmpty() &&

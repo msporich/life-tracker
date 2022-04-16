@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeTracker">
         <activity
+<<<<<<< Updated upstream
+=======
+            android:name=".SleepGraph"
+            android:exported="true" />
+        <activity
+            android:name=".SleepList"
+            android:exported="true"
+            android:label="@string/title_activity_sleep_list"
+            android:theme="@style/Theme.LifeTracker.NoActionBar" />
+        <activity
+            android:name=".ProfileSettingsActivity"
+            android:exported="true"
+            android:parentActivityName=".SettingsActivity" />
+        <activity
+>>>>>>> Stashed changes
             android:name=".MoodEditing"
             android:exported="true" />
         <activity
