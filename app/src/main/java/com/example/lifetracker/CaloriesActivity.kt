@@ -11,6 +11,7 @@ import com.example.lifetracker.databinding.ActivityCaloriesBinding
 import com.example.lifetracker.databinding.ActivityFitnessBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import java.util.*
 
 class CaloriesActivity : AppCompatActivity() {
 
@@ -36,6 +37,8 @@ class CaloriesActivity : AppCompatActivity() {
         val db = FirebaseFirestore.getInstance().collection("food")
         val query = db.get().addOnSuccessListener { documents ->
 
+            var totalCaloriesToday = 0;
+
             // Clear all views before refreshing
             binding.linearLayout.removeAllViews()
 
@@ -44,6 +47,22 @@ class CaloriesActivity : AppCompatActivity() {
 
                 // Create food object from db record
                 val food = document.toObject(Food::class.java)
+
+                // Compare date consumed to today's date
+                val now = Calendar.getInstance()
+                val consumed = Calendar.getInstance()
+                consumed.time = food.dateConsumed!!
+
+                val todayDayOfYear = now.get(Calendar.DAY_OF_YEAR)
+                val todayYear = now.get(Calendar.YEAR)
+                val consumedDayOfYear = consumed.get(Calendar.DAY_OF_YEAR)
+                val consumedYear = consumed.get(Calendar.YEAR)
+
+                // Add calories to running total if date consumed is today
+                if (todayYear == consumedYear && todayDayOfYear == consumedDayOfYear) {
+                    Log.d("match", food.foodCalories.toString())
+                    totalCaloriesToday += food.foodCalories!!
+                }
 
                 // Add data to views
 
@@ -79,6 +98,8 @@ class CaloriesActivity : AppCompatActivity() {
                 binding.linearLayout.addView(textViewDateConsumed)
                 binding.linearLayout.addView(textViewWhiteSpace)
             }
+
+            binding.textViewCaloriesToday.text = totalCaloriesToday.toString()
 
             // TODO: REMOVE THIS LATER
 //            val intent = Intent(this, CaloriesAddNewActivity::class.java);
