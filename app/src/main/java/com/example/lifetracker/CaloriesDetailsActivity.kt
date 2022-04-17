@@ -7,6 +7,7 @@ import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import com.example.lifetracker.databinding.ActivityCaloriesDetailsBinding
 import com.google.firebase.firestore.FirebaseFirestore
+import java.util.*
 
 class CaloriesDetailsActivity : AppCompatActivity() {
 
@@ -18,15 +19,30 @@ class CaloriesDetailsActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val dateConsumed = intent.getStringExtra("dateConsumed")
-        val dateConsumedSbstr1 = dateConsumed?.subSequence(0, 10).toString()
-        val dateConsumedSbstr2 = dateConsumed?.subSequence(24, 28).toString()
+        val foodId = intent.getStringExtra("foodId")
+        val foodName = intent.getStringExtra("foodName")
+        val foodCalories = intent.getStringExtra("foodCalories")
+        val foodCategory = intent.getStringExtra("foodCategory")
+        val dateConsumed = intent.getStringExtra("dateConsumed").toString()
+        val dateConsumedSbstr1 = dateConsumed.subSequence(0, 10).toString()
+        val dateConsumedSbstr2 = dateConsumed.subSequence(24, 28).toString()
         val dateConsumedFormatted = "$dateConsumedSbstr1, $dateConsumedSbstr2"
 
-        binding.textViewFoodName.text = intent.getStringExtra("foodName")
-        binding.textViewCalories.text = intent.getStringExtra("foodCalories")
-        binding.textViewCategory.text = intent.getStringExtra("foodCategory")
+        binding.textViewFoodName.text = foodName
+        binding.textViewCalories.text = foodCalories
+        binding.textViewCategory.text = foodCategory
         binding.textViewDateConsumed.text = dateConsumedFormatted
+
+        // Redirect to edit page
+        binding.buttonEdit.setOnClickListener{
+            val intent = Intent(this, CaloriesAddNewActivity::class.java)
+            intent.putExtra("foodId", foodId)
+            intent.putExtra("foodName", foodName)
+            intent.putExtra("foodCalories", foodCalories)
+            intent.putExtra("foodCategory", foodCategory)
+            intent.putExtra("dateConsumed", dateConsumed)
+            startActivity(intent)
+        }
 
         // Delete the calorie data if delete button is clicked then redirect to main schedule
         binding.buttonDelete.setOnClickListener{

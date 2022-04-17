@@ -26,6 +26,33 @@ class CaloriesAddNewActivity : AppCompatActivity() {
             Toast.makeText(this, toast, Toast.LENGTH_LONG).show()
         }
 
+        val foodId = intent.getStringExtra("foodId")
+        var foodCategoryPos = 0;
+        var updateMode = false;
+        if (foodId != null) {
+            // Update mode
+            updateMode = true;
+            Log.d("Update mode", updateMode.toString())
+            if (intent.getStringExtra("foodCategory") == "Breakfast") {
+                foodCategoryPos = 1
+            }
+            else if (intent.getStringExtra("foodCategory") == "Lunch") {
+                foodCategoryPos = 2
+            }
+            else if (intent.getStringExtra("foodCategory") == "Dinner") {
+                foodCategoryPos = 3
+            }
+            else if (intent.getStringExtra("foodCategory") == "Snack") {
+                foodCategoryPos = 4
+            }
+            else {
+                Log.w("Invalid", "Something went wrong")
+            }
+            binding.editTextFoodName.setText(intent.getStringExtra("foodName"))
+            binding.editTextCaloriesAmount.setText(intent.getStringExtra("foodCalories"))
+            binding.spinnerFoodCategory.setSelection(foodCategoryPos)
+        }
+
         // Listen for save button click
         binding.fabSaveNewCalorie.setOnClickListener {
 
@@ -53,26 +80,49 @@ class CaloriesAddNewActivity : AppCompatActivity() {
                     food.foodCategory = binding.spinnerFoodCategory.selectedItem.toString()
                     food.dateConsumed = dateConsumed.time
 
-                    // Set owner
-                    val currentUser = FirebaseAuth.getInstance().uid
-                    food.ownerId = currentUser
-
-                    // Get unique id from Firestore
                     val db = FirebaseFirestore.getInstance().collection("food")
-                    food.id = db.document().id
-
-                    // Create new record
-                    db.document(food.id!!).set(food)
-
-                    // Redirect to main calorie tracker activity and display toast
                     val intent = Intent(this, CaloriesRecyclerActivity::class.java)
-                    intent.putExtra("toast", "Calorie data added")
-                    startActivity(intent)
 
+                    if (updateMode) {
+                        food.id = foodId
+                        db
+                            .document(food.id!!)
+                            .update("foodName", food.foodName, "foodCalories", food.foodCalories, "foodCategory", food.foodCategory, "dateConsumed", food.dateConsumed)
+                            .addOnSuccessListener {
+                                Log.d("Database", "Calorie data updated")
+                                intent.putExtra("toast", "Calorie data updated")
+                            }
+                            .addOnFailureListener { e ->
+                                Log.w("Database", "Failed to update", e)
+                                intent.putExtra("toast", "Failed to update")
+                            }
+                        startActivity(intent)
+                    }
+                    else {
+                        // Set owner
+                        val currentUser = FirebaseAuth.getInstance().uid
+                        food.ownerId = currentUser
+
+                        // Get unique id from Firestore
+                        food.id = db.document().id
+
+                        // Create new record
+                        db
+                            .document(food.id!!)
+                            .set(food)
+                            .addOnSuccessListener {
+                                // Redirect to main calorie tracker activity and display toast
+                                Log.i("Database", "Calorie data added")
+                                intent.putExtra("toast", "Calorie data added")
+                            }
+                            .addOnFailureListener { e ->
+                                Log.w("Database", "Failed to add data")
+                                intent.putExtra("toast", "Failed to add data")
+                            }
+                        startActivity(intent)
+                    }
                 }
             }
-
         }
-
     }
 }
