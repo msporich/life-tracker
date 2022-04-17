@@ -33,20 +33,22 @@ class CaloriesAddNewActivity : AppCompatActivity() {
             // Update mode
             updateMode = true;
             Log.d("Update mode", updateMode.toString())
-            if (intent.getStringExtra("foodCategory") == "Breakfast") {
-                foodCategoryPos = 1
-            }
-            else if (intent.getStringExtra("foodCategory") == "Lunch") {
-                foodCategoryPos = 2
-            }
-            else if (intent.getStringExtra("foodCategory") == "Dinner") {
-                foodCategoryPos = 3
-            }
-            else if (intent.getStringExtra("foodCategory") == "Snack") {
-                foodCategoryPos = 4
-            }
-            else {
-                Log.w("Invalid", "Something went wrong")
+            when {
+                intent.getStringExtra("foodCategory") == "Breakfast" -> {
+                    foodCategoryPos = 1
+                }
+                intent.getStringExtra("foodCategory") == "Lunch" -> {
+                    foodCategoryPos = 2
+                }
+                intent.getStringExtra("foodCategory") == "Dinner" -> {
+                    foodCategoryPos = 3
+                }
+                intent.getStringExtra("foodCategory") == "Snack" -> {
+                    foodCategoryPos = 4
+                }
+                else -> {
+                    Log.w("Invalid", "Something went wrong")
+                }
             }
             binding.editTextFoodName.setText(intent.getStringExtra("foodName"))
             binding.editTextCaloriesAmount.setText(intent.getStringExtra("foodCalories"))

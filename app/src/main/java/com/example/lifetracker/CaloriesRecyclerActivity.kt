@@ -22,7 +22,6 @@ class CaloriesRecyclerActivity : AppCompatActivity(), CaloriesRecyclerViewAdapte
 
         // Check current user
         val currentUser = FirebaseAuth.getInstance().uid
-        Log.d("Current user", currentUser.toString())
 
         // Check for and display toasts
         val toast = intent.getStringExtra("toast")
@@ -46,7 +45,6 @@ class CaloriesRecyclerActivity : AppCompatActivity(), CaloriesRecyclerViewAdapte
 
                 // Add calories to running total if date consumed is today
                 if (todayYear == consumedYear && todayDayOfYear == consumedDayOfYear) {
-                    Log.d("match", food.foodCalories.toString())
                     totalCaloriesToday += food.foodCalories!!
                 }
             }
@@ -64,7 +62,6 @@ class CaloriesRecyclerActivity : AppCompatActivity(), CaloriesRecyclerViewAdapte
     }
 
     override fun foodSelected(food: Food) {
-        Log.d("Food Selected", food.foodName.toString())
         val intent = Intent(this, CaloriesDetailsActivity::class.java)
         intent.putExtra("foodId", food.id)
         intent.putExtra("foodName", food.foodName)
