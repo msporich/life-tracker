@@ -93,12 +93,13 @@ class CaloriesAddNewActivity : AppCompatActivity() {
                             .addOnSuccessListener {
                                 Log.d("Database", "Calorie data updated")
                                 intent.putExtra("toast", "Calorie data updated")
+                                startActivity(intent)
                             }
                             .addOnFailureListener { e ->
                                 Log.w("Database", "Failed to update", e)
                                 intent.putExtra("toast", "Failed to update")
+                                startActivity(intent)
                             }
-                        startActivity(intent)
                     }
                     else {
                         // Set owner
@@ -116,12 +117,13 @@ class CaloriesAddNewActivity : AppCompatActivity() {
                                 // Redirect to main calorie tracker activity and display toast
                                 Log.i("Database", "Calorie data added")
                                 intent.putExtra("toast", "Calorie data added")
+                                startActivity(intent)
                             }
                             .addOnFailureListener { e ->
                                 Log.w("Database", "Failed to add data")
                                 intent.putExtra("toast", "Failed to add data")
+                                startActivity(intent)
                             }
-                        startActivity(intent)
                     }
                 }
             }
