@@ -15,16 +15,17 @@
         <entry key="app/src/main/res/layout/activity_grid_recycler.xml" value="0.17291666666666666" />
         <entry key="app/src/main/res/layout/activity_mood.xml" value="0.17291666666666666" />
         <entry key="app/src/main/res/layout/activity_mood_editing.xml" value="0.17291666666666666" />
-        <entry key="app/src/main/res/layout/activity_moods_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_moods_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sleep.xml" value="0.28014065780798314" />
         <entry key="app/src/main/res/layout/activity_sleep_graph.xml" value="0.17691064182129385" />
         <entry key="app/src/main/res/layout/activity_sleep_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sleep_listing.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_sleeps_listing.xml" value="0.24074074074074073" />
         <entry key="app/src/main/res/layout/activity_workout_detail.xml" value="0.17291666666666666" />
         <entry key="app/src/main/res/layout/content_sleep_list.xml" value="0.2574074074074074" />
         <entry key="app/src/main/res/layout/item_grid_workout.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_mood.xml" value="0.17291666666666666" />
-        <entry key="app/src/main/res/layout/item_sleep.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_sleep.xml" value="0.1" />
       </map>
     </option>
   </component>

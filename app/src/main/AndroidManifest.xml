@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LifeTracker">
         <activity
-            android:name=".SleepListingActivity"
+            android:name=".SleepsListActivity"
             android:exported="true" />
-        <activity
-            android:name=".SleepGraph"
-            android:exported="true" />
-        <activity
-            android:name=".SleepList"
-            android:exported="true"
-            android:label="@string/title_activity_sleep_list"
-            android:theme="@style/Theme.LifeTracker.NoActionBar" />
+        <!--        <activity-->
+        <!--            android:name=".SleepGraph"-->
+        <!--            android:exported="true" />-->
+        <!--        <activity-->
+        <!--            android:name=".SleepList"-->
+        <!--            android:exported="true"-->
+        <!--            android:label="@string/title_activity_sleep_list"-->
+        <!--            android:theme="@style/Theme.LifeTracker.NoActionBar" />-->
         <activity
             android:name=".ProfileSettingsActivity"
             android:exported="true"

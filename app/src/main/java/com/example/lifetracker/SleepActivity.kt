@@ -27,23 +27,14 @@ class SleepActivity : AppCompatActivity() {
 
         val user = Firebase.auth.currentUser
 
-        binding.backFAB.setOnClickListener {
-            startActivity(Intent(this, ModulesActivity::class.java))
-        }
-
-
         binding.button4.setOnClickListener {
-            startActivity(Intent(this, SleepListingActivity::class.java))
+            var intent = Intent(this, SleepsListActivity::class.java)
+            startActivity(intent)
         }
-
-        //binding.button5.setOnClickListener {
-        //    startActivity(Intent(this, SleepGraph::class.java))
-        //}
-
 
         binding.button2.setOnClickListener {
-            if (binding.editTextDate.text.toString().isEmpty() &&
-                binding.editTextTime.text.toString().isEmpty() &&
+            if (binding.editTextDate.text.toString().isEmpty() ||
+                binding.editTextTime.text.toString().isEmpty() ||
                 binding.editTextTime2.text.toString().isEmpty()
 
             ) {
@@ -54,7 +45,7 @@ class SleepActivity : AppCompatActivity() {
                 val sleep = Sleep()
                 sleep.userId = user?.uid
 
-                sleep.date = binding.editTextDate.text.toString()
+                sleep.sleepDate = binding.editTextDate.text.toString()
                 sleep.sleepStart = binding.editTextTime.text.toString()
                 sleep.sleepEnd = binding.editTextTime2.text.toString()
 
@@ -62,27 +53,21 @@ class SleepActivity : AppCompatActivity() {
                 val format = SimpleDateFormat("yyyy/MM/dd 'at' HH:mm:ss")
                 val dateTime = format.format(dateTimeInstance.time).toString()
 
-                sleep.date = dateTime
+                sleep.sleepDate = dateTime
 
                 //loading the database
                 val dbSleep = FirebaseFirestore.getInstance().collection("sleep")
-                sleep.id = dbSleep.document().id
+                sleep.sleepId = dbSleep.document().id
 
                 //storing the sleep object in the database
-                dbSleep.document(sleep.id!!).set(sleep)
+                dbSleep.document(sleep.sleepId!!).set(sleep)
                     .addOnSuccessListener {
                         Toast.makeText(this, "New Sleep Time Added", Toast.LENGTH_LONG).show()
                     }
                     .addOnFailureListener {
                         Toast.makeText(this, "New Sleep Time Failed", Toast.LENGTH_LONG).show()
-
-
                     }
-            }
-
-
-
             }
         }
     }
-
+}

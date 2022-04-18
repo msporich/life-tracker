@@ -1,48 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sleepItem"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:background="@drawable/grid_item_selector"
+    android:layout_height="wrap_content"
+    android:layout_margin="5sp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:clickable="true"
     android:focusable="true"
-    android:layout_margin="@dimen/grid_padding">
+    android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textViewSleepDate"
+        android:id="@+id/sleepStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/reg_font_size"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/yyyy_mm_dd" />
-
-    <TextView
-        android:id="@+id/textViewSleepStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:textColor="@color/black"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="5sp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.155"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/_8_00" />
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:typeface="normal"
+        tools:text="Sleep Start: 8" />
 
     <TextView
-        android:id="@+id/textViewSleepEnd"
+        android:id="@+id/sleepEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:text="@string/_10_00"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="5sp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:typeface="normal"
+        tools:text="Sleep End: 9" />
+
+    <TextView
+        android:id="@+id/sleepDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="5sp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:textColor="#000000"
+        tools:text="2021/11/13 at 14:53:22" />
+
+</android.widget.LinearLayout>
