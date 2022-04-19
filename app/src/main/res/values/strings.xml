@@ -119,7 +119,6 @@
     <string name="enter_sleep_end_time">Enter Sleep End Time:</string>
     <string name="add">Add</string>
     <string name="enter_date_yyyy_mm_dd">Enter Date: yyyy.mm.dd</string>
-<<<<<<< HEAD
     <string name="view_tracked_sleep">View Tracked Sleep</string>
     <string name="yyyy_mm_dd">YYYY.MM.DD</string>
     <string name="_8_00">8:00</string>
@@ -133,7 +132,6 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-=======
 
     <string-array name="calorieCategory">
         <item>Select a category</item>
@@ -143,5 +141,4 @@
         <item>Snack</item>
     </string-array>
 
->>>>>>> Calorie-Tracker
 </resources>
