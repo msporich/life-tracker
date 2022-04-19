@@ -140,5 +140,6 @@
         <item>Dinner</item>
         <item>Snack</item>
     </string-array>
-
+    <string name="view_graph">View Graph</string>
+    <string name="graph">Graph</string>
 </resources>
