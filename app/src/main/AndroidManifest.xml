@@ -37,6 +37,10 @@
             android:exported="true"
             android:parentActivityName=".CaloriesRecyclerActivity" />
         <activity
+            android:name=".WorkoutGraph"
+            android:exported="true" />
+
+        <activity
             android:name=".MoodEditing"
             android:exported="true" />
         <activity
@@ -74,6 +78,7 @@
         <activity
             android:name=".ModulesActivity"
             android:exported="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
