@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.example.lifetracker.databinding.ActivityFitnessBinding
 import com.google.firebase.auth.ktx.auth
@@ -21,6 +22,10 @@ class FitnessActivity : AppCompatActivity() {
 
         binding = ActivityFitnessBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+//        val mArrayAdapter = ArrayAdapter<Any?>(this, R.layout.spinner_item, R.array.reps)
+//        mArrayAdapter.setDropDownViewResource(R.layout.spinner_item)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.floatingActionButton.setOnClickListener {

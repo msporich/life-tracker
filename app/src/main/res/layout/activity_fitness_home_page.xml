@@ -4,18 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FitnessHomePageActivity">
+    tools:context=".FitnessHomePageActivity"
+    android:background="?attr/bgColor">
 
-    <ImageView
-        android:id="@+id/imageBackground"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/gymphoto" />
+
 
     <Button
         android:id="@+id/buttonGoBack"
@@ -38,6 +30,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="36dp"
         android:background="@color/purple_500"
+        android:gravity="center"
         android:text="@string/fitness_tracker"
         android:textAlignment="center"
         android:textColor="#FFFF"

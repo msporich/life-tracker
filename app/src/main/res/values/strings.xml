@@ -77,7 +77,7 @@
         <item>295</item>
         <item>300+</item>
     </string-array>
-    <string-array name="reps">
+    <string-array name="reps" id="reps">
         <item>Reps</item>
         <item>1</item>
         <item>2</item>
@@ -132,4 +132,13 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string-array name="calorieCategory">
+        <item>Select a category</item>
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snack</item>
+    </string-array>
+
 </resources>

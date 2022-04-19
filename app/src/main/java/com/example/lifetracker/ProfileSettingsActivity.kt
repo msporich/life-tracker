@@ -11,10 +11,20 @@ import com.google.firebase.ktx.Firebase
 
 class ProfileSettingsActivity : AppCompatActivity() {
 
+
+    private lateinit var saveData: SaveData
     private lateinit var binding: ActivityProfileSettingsBinding
     private val auth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        saveData = SaveData(this)
+        if (saveData.loadDarkModeState() == true) {
+            setTheme(R.style.Theme_LifeTrackerNight)
+        } else {
+            setTheme(R.style.Theme_LifeTracker)
+        }
+
         super.onCreate(savedInstanceState)
         binding = ActivityProfileSettingsBinding.inflate(layoutInflater)
 

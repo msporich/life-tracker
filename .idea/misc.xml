@@ -7,11 +7,14 @@
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/drawable/grid_item_selector.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_app_appearance.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_calories.xml" value="0.4" />
-        <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_fitness.xml" value="0.8800000000000001" />
+        <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_calories_add_new.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_fitness.xml" value="0.264" />
+        <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_fitness_home_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_grid_recycler.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_modules.xml" value="0.264" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_mood.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_mood_graph.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_moods_list.xml" value="0.264" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_profile_settings.xml" value="0.536" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_settings.xml" value="0.264" />
@@ -19,6 +22,7 @@
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_sleep_list.xml" value="0.2" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_theme.xml" value="0.72" />
         <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/activity_user_settings.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/angel/Desktop/ME/College Studies/Sem 6/life-tracker/app/src/main/res/layout/spinner_item.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_fitness.xml" value="0.17291666666666666" />
         <entry key="app/src/main/res/layout/activity_fitness_home_page.xml" value="0.17291666666666666" />
         <entry key="app/src/main/res/layout/activity_grid_recycler.xml" value="0.17291666666666666" />
