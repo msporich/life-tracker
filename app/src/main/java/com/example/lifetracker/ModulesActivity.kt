@@ -16,7 +16,7 @@ class ModulesActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonCalories.setOnClickListener {
-            var intent = Intent(this, CaloriesActivity::class.java)
+            var intent = Intent(this, CaloriesRecyclerActivity::class.java)
             startActivity(intent)
         }
         binding.buttonFitness.setOnClickListener {
