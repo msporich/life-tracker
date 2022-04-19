@@ -23,7 +23,22 @@ class WorkoutDetailActivity : AppCompatActivity() {
         }
 
         binding.buttonGraphView.setOnClickListener {
-            startActivity(Intent(this, WorkoutGraph::class.java))
+            val intent = Intent(this, WorkoutGraph::class.java)
+            intent.putExtra("workoutId", intent.getStringExtra("workoutId"))
+            intent.putExtra("weight", intent.getStringExtra("weight"))
+            intent.putExtra("reps", intent.getStringExtra("reps"))
+            intent.putExtra("sets", intent.getStringExtra("sets"))
+            startActivity(intent)
         }
+
+        fun workoutSelected(workout: Workout) {
+            val intent = Intent(this, WorkoutGraph::class.java)
+            intent.putExtra("workoutId", workout.workoutId)
+            intent.putExtra("weight", workout.weight)
+            intent.putExtra("reps", workout.reps)
+            intent.putExtra("sets", workout.sets)
+            startActivity(intent)
+        }
+
     }
 }

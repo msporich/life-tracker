@@ -1,5 +1,6 @@
 package com.example.lifetracker
 
+import android.content.Intent
 import android.graphics.Color.BLACK
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -40,13 +41,17 @@ class WorkoutGraph : AppCompatActivity() {
                 for (document in documents) {
                     val workout = document.toObject(Workout::class.java)
                     workoutList.add(workout)
+                    Log.d("Retrieval Success", "Got data correctly.")
                 }
 
                 for (workout in workoutList) {
-                    weightCounter += workout.weight!!.toFloat()
-                    repsCounter += workout.reps!!.toFloat()
-                    setsCounter += workout.sets!!.toFloat()
+                    Log.d("Current workout?", workout.workoutId.toString())
+                    weightCounter = intent.getStringExtra("weight")!!.toFloat()
+                    repsCounter = intent.getStringExtra("reps")!!.toFloat()
+                    setsCounter = intent.getStringExtra("sets")!!.toFloat()
                 }
+
+                Log.d("Current page position", "After For Loop")
 
                 val graph = binding.workoutGraph
 
@@ -77,6 +82,7 @@ class WorkoutGraph : AppCompatActivity() {
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Failed retrieving documents.", Toast.LENGTH_LONG).show()
+                Log.d("Retrieval Failure", "Could not get data.")
             }
     }
 
