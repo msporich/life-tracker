@@ -18,16 +18,19 @@ class WorkoutDetailActivity : AppCompatActivity() {
         binding.txtViewRepsDetail.text = intent.getStringExtra("reps")
         binding.txtViewSetsDetail.text = intent.getStringExtra("sets")
 
+        val weight = intent.getStringExtra("weight")
+        val reps = intent.getStringExtra("reps")
+        val sets = intent.getStringExtra("sets")
+
         binding.buttonBackDetail.setOnClickListener {
             startActivity(Intent(this, GridRecyclerActivity::class.java))
         }
 
         binding.buttonGraphView.setOnClickListener {
             val intent = Intent(this, WorkoutGraph::class.java)
-            intent.putExtra("workoutId", intent.getStringExtra("workoutId"))
-            intent.putExtra("weight", intent.getStringExtra("weight"))
-            intent.putExtra("reps", intent.getStringExtra("reps"))
-            intent.putExtra("sets", intent.getStringExtra("sets"))
+            intent.putExtra("weight", weight)
+            intent.putExtra("reps", reps)
+            intent.putExtra("sets", sets)
             startActivity(intent)
         }
 
