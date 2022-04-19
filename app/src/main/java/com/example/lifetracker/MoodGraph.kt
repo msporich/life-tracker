@@ -23,10 +23,17 @@ import com.github.mikephil.charting.components.AxisBase
 
 
 class MoodGraph : AppCompatActivity() {
-
+    private lateinit var saveData: SaveData
     private lateinit var binding: ActivityMoodGraphBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        saveData = SaveData(this)
+        if (saveData.loadDarkModeState() == true) {
+            setTheme(R.style.Theme_LifeTrackerNight)
+        } else {
+            setTheme(R.style.Theme_LifeTracker)
+        }
+
         super.onCreate(savedInstanceState)
 
         binding = ActivityMoodGraphBinding.inflate(layoutInflater)

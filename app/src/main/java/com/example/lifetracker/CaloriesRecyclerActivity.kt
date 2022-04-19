@@ -13,8 +13,15 @@ import java.util.*
 class CaloriesRecyclerActivity : AppCompatActivity(), CaloriesRecyclerViewAdapter.FoodItemListener {
 
     private lateinit var binding : ActivityCaloriesRecyclerBinding
+    private lateinit var saveData: SaveData
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        saveData = SaveData(this)
+        if (saveData.loadDarkModeState() == true) {
+            setTheme(R.style.Theme_LifeTrackerNight)
+        } else {
+            setTheme(R.style.Theme_LifeTracker)
+        }
         super.onCreate(savedInstanceState)
         binding = ActivityCaloriesRecyclerBinding.inflate(layoutInflater)
         setContentView(binding.root)

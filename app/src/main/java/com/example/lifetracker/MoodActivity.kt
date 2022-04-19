@@ -26,9 +26,17 @@ Description: This page allows the user to track their current "mood"
 
 class MoodActivity : AppCompatActivity() {
 
+    private lateinit var saveData: SaveData
+
     private lateinit var binding: ActivityMoodBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        saveData = SaveData(this)
+        if (saveData.loadDarkModeState() == true) {
+            setTheme(R.style.Theme_LifeTrackerNight)
+        } else {
+            setTheme(R.style.Theme_LifeTracker)
+        }
         super.onCreate(savedInstanceState)
 
         binding = ActivityMoodBinding.inflate(layoutInflater)

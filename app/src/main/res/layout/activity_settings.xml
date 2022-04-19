@@ -77,53 +77,53 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/buttonProfileSettings" />
 
-    <Button
-        android:id="@+id/buttonFriendSettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#eb9b34"
-        android:paddingStart="50dp"
-        android:text="Change Friend Settings"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonAppAppearance" />
+<!--    <Button-->
+<!--        android:id="@+id/buttonFriendSettings"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="10dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:backgroundTint="#eb9b34"-->
+<!--        android:paddingStart="50dp"-->
+<!--        android:text="Change Friend Settings"-->
+<!--        android:textAlignment="viewStart"-->
+<!--        android:textAllCaps="false"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.473"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/buttonAppAppearance" />-->
 
-    <Button
-        android:id="@+id/buttonMeasurementSettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#eb9b34"
-        android:paddingStart="50dp"
-        android:text="Change Measurement Settings"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonFriendSettings" />
+<!--    <Button-->
+<!--        android:id="@+id/buttonMeasurementSettings"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="10dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:backgroundTint="#eb9b34"-->
+<!--        android:paddingStart="50dp"-->
+<!--        android:text="Change Measurement Settings"-->
+<!--        android:textAlignment="viewStart"-->
+<!--        android:textAllCaps="false"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.473"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/buttonFriendSettings" />-->
 
-    <Button
-        android:id="@+id/buttonAccessibilitySettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#eb9b34"
-        android:paddingStart="50dp"
-        android:text="Accessibility Settings"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonMeasurementSettings" />
+<!--    <Button-->
+<!--        android:id="@+id/buttonAccessibilitySettings"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="10dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:backgroundTint="#eb9b34"-->
+<!--        android:paddingStart="50dp"-->
+<!--        android:text="Accessibility Settings"-->
+<!--        android:textAlignment="viewStart"-->
+<!--        android:textAllCaps="false"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.473"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/buttonMeasurementSettings" />-->
 
 
 

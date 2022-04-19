@@ -36,18 +36,18 @@ class SettingsActivity : AppCompatActivity() {
             var intent = Intent(this, ThemeActivity::class.java)
             startActivity(intent)
         }
-
-        binding.buttonFriendSettings.setOnClickListener {
-            Toast.makeText(this, "Page Making in Progress", Toast.LENGTH_LONG).show()
-        }
-
-        binding.buttonMeasurementSettings.setOnClickListener {
-            Toast.makeText(this, "Page Making in Progress", Toast.LENGTH_LONG).show()
-        }
-
-        binding.buttonAccessibilitySettings.setOnClickListener {
-            Toast.makeText(this, "Page Making in Progress", Toast.LENGTH_LONG).show()
-        }
+//
+//        binding.buttonFriendSettings.setOnClickListener {
+//            Toast.makeText(this, "Page Making in Progress", Toast.LENGTH_LONG).show()
+//        }
+//
+//        binding.buttonMeasurementSettings.setOnClickListener {
+//            Toast.makeText(this, "Page Making in Progress", Toast.LENGTH_LONG).show()
+//        }
+//
+//        binding.buttonAccessibilitySettings.setOnClickListener {
+//            Toast.makeText(this, "Page Making in Progress", Toast.LENGTH_LONG).show()
+//        }
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }

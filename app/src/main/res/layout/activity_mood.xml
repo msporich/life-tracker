@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/bgColor"
     tools:context=".MoodActivity">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_marginTop="48dp"
         android:fontFamily="sans-serif-black"
         android:text="Mood Tracker"
+        android:textColor="?attr/textColor"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="Select Current Mood"
+        android:textColor="?attr/textColor"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,6 +44,7 @@
         <RadioButton
             android:id="@+id/neutralButton"
             android:layout_width="match_parent"
+            android:textColor="?attr/textColor"
             android:layout_height="wrap_content"
             android:text="Neutral Mood" />
 
@@ -48,17 +52,20 @@
             android:id="@+id/happyButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="?attr/textColor"
             android:text="Happy Mood" />
 
         <RadioButton
             android:id="@+id/sadButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="?attr/textColor"
             android:text="Sad Mood" />
 
         <RadioButton
             android:id="@+id/angryButton"
             android:layout_width="match_parent"
+            android:textColor="?attr/textColor"
             android:layout_height="wrap_content"
             android:text="Angry Mood" />
     </RadioGroup>

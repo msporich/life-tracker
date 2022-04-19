@@ -23,10 +23,19 @@ import com.google.firebase.ktx.Firebase
 class MoodsListActivity : AppCompatActivity(), MoodsListViewAdapter.MoodItemListener {
 
     private lateinit var binding: ActivityMoodsListBinding
+    private lateinit var saveData: SaveData
     private lateinit var viewModel : MoodsListViewModel
     private lateinit var viewModelFactory : MoodsViewModelFactory
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        saveData = SaveData(this)
+        if (saveData.loadDarkModeState() == true) {
+            setTheme(R.style.Theme_LifeTrackerNight)
+        } else {
+            setTheme(R.style.Theme_LifeTracker)
+        }
+
         super.onCreate(savedInstanceState)
 
         binding = ActivityMoodsListBinding.inflate(layoutInflater)

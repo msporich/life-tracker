@@ -8,7 +8,16 @@ import com.example.lifetracker.databinding.ActivityGridRecyclerBinding
 
 class GridRecyclerActivity : AppCompatActivity(), GridAdapter.WorkoutItemListener {
     private lateinit var binding : ActivityGridRecyclerBinding
+    private lateinit var saveData: SaveData
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        saveData = SaveData(this)
+        if (saveData.loadDarkModeState() == true) {
+            setTheme(R.style.Theme_LifeTrackerNight)
+        } else {
+            setTheme(R.style.Theme_LifeTracker)
+        }
+
         super.onCreate(savedInstanceState)
         binding = ActivityGridRecyclerBinding.inflate(layoutInflater)
         setContentView(binding.root)

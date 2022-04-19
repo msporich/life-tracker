@@ -10,7 +10,8 @@
         <attr name="bgColor" format="color"/>
         <attr name="textColor" format="color"/>
         <attr name="textColorHint" format="color"/>
-
+        <attr name="itemBg" format="color" />
+        <attr name="itemText" format="color" />
     </declare-styleable>
 
 
